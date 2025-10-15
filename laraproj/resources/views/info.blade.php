@@ -6,7 +6,7 @@
     </div>
 
     <div class="konten">
-        <h3>Welcome Page</h3>
+        <h3>Info Teman {{$nama}}</h3>
     </div>
 
 
