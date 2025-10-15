@@ -2,9 +2,9 @@
 1. clone repositories ini
 2. copy file .env.example ke .env
 3. generate key
-   ```bash
-   php artisan key:generate
-   ```
+```bash
+php artisan key:generate
+```
 4. lakukan update/install modul-modul laravel
 ```bash
 composer install
