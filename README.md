@@ -1,5 +1,5 @@
 ## Menggunakan Laravel
-1. clone repositories ini
+1. clone repositories ini atau [download](https://github.com/arthawebid/webprog-laraproject-H/archive/refs/heads/main.zip)
 2. copy file .env.example ke .env
 3. composer install
 ```
