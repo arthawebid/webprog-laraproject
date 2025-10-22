@@ -9,6 +9,8 @@ class infoTemanController extends Controller
     public function index(){
         $nama = "Zizuki";
         
+        //https://shorturl.at/6L1DX
+
         $dtateman = [
             [
                 "namateman"=>"Tangidah Idun",
