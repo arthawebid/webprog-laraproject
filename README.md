@@ -16,4 +16,8 @@ php artisan migrate
 ```bash
 php artisan key:generate
 ```
+6. Aktifkan internal Laravel Server
+```bash
+php artisan serve
+```
 
