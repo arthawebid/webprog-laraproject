@@ -34,7 +34,11 @@ class infoTemanController extends Controller
 
     public function detail($id){
         $dtateman = collect($this->dteman)->firstWhere('idbuku',$id);
-
+        
+        if(!$dtateman){
+            abort(404,"Data tidak ditemukan");
+        }
+        
         return view('infodetail',compact('dtateman'));
     }
 }
