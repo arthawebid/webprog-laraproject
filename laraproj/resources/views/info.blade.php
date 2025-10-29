@@ -8,13 +8,12 @@
     <div class="konten">
         <h3>Info Teman {{$nama}}</h3>
 
-        <table border="1">
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th>Nama Teman</th>
                     <th>Alamat</th>
-                    <th>Kota</th>
-                    <th>Nomor WA</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -22,8 +21,7 @@
                 <tr>
                     <td>{{ $tm['namateman'] }}</td>
                     <td>{{ $tm['alamat'] }}</td>
-                    <td>{{ $tm['kota'] }}</td>
-                    <td>{{ $tm['wa'] }}</td>
+                    <td><a class="btn btn-warning btn-sm" href="{{route('infoteman.detail', $tm['idbuku']  )}}"> detail </a></td>
                 </tr>
                 @endforeach
 
