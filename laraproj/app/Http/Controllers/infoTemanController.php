@@ -34,6 +34,27 @@ class infoTemanController extends Controller
         return view('infodetail',compact('dtateman'));
     }
 
+    public function create(){
+        return view('infocreate');
+    }
+    public function store(Request $req){
+        $req->validate([
+            'namateman'=> 'required',
+            'alamat'=> 'required',
+            'kota'=> 'required',
+            'wa'=> 'required',
+        ]);
+        $dtateman = $this->readData();
+        $new =[
+            'idbuku' => count(dtateman) ? max(array_column($dtateman, 'idbuku'))+1 : 1,
+            'namateman' => $req->namateman,
+            'alamat' => $req->alamat,
+            'kota' => $req->kota,
+            'wa' => $req->wa,
+        ];
+        
+    }
+
     private function readData(){
 
         if(!file_get_contents($this->dteman) ){

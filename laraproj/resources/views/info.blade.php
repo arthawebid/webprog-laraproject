@@ -8,6 +8,8 @@
     <div class="konten">
         <h3>Info Teman {{$nama}}</h3>
 
+        <a class="btn btn-primary btn-sm" href="{{ route('infoteman.create') }}"> + DataBaru</a>
+
         <table class="table table-hover">
             <thead>
                 <tr>
