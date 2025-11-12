@@ -6,20 +6,23 @@
 
 <div class="container">
 
-<div class="card" style="width: 20rem;">
-  <div class="card-body">
-    <div class="card" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{ $dtateman["namateman"] }}</li>
-            <li class="list-group-item">{{ $dtateman["alamat"] }} {{ $dtateman["kota"] }}</li>
-            <li class="list-group-item">{{ $dtateman["wa"] }}</li>
-        </ul>
-    </div>
-  </div>
-  <div class="card-footer">
-    <a class="btn btn-primary" href="{{route('infoteman')}}"> kembali </a>
-  </div>
-</div>
+<h3>Perbaharui Data Teman</h3>
+
+        <form action="{{ route('infoteman.update', $dtateman['idbuku']) }}" method="POST">
+          @csrf
+          @method('PUT')
+
+            Nama Teman
+            <input type="text" name="namateman" value="{{ $dtateman['namateman'] }}" required>
+            Alamat
+            <input type="text" name="alamat" required>
+            Kota
+            <input type="text" name="kota" required>
+            WA
+            <input type="text" name="wa" required>
+            
+            <button type="submit"> Simpan Data </button>
+        </form>
 
 </div>
 

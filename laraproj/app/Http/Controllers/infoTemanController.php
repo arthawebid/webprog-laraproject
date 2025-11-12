@@ -46,13 +46,18 @@ class infoTemanController extends Controller
         ]);
         $dtateman = $this->readData();
         $new =[
-            'idbuku' => count(dtateman) ? max(array_column($dtateman, 'idbuku'))+1 : 1,
+            'idbuku' => count($dtateman) ? max(array_column($dtateman, 'idbuku'))+1 : 1,
             'namateman' => $req->namateman,
             'alamat' => $req->alamat,
             'kota' => $req->kota,
             'wa' => $req->wa,
         ];
+
+        $dtateman[] = $new;
+
+        file_put_contents($this->dteman, json_encode($dtateman, JSON_PRETTY_PRINT) );
         
+        return redirect()->route('infoteman')->with('success','Data Berhasil ditambahkan');
     }
 
     private function readData(){

@@ -7,7 +7,9 @@
 
     <div class="konten">
         <h3>Info Teman {{$nama}}</h3>
-
+        @if( session('success') )
+        <p style="color: green">{{session('success')}}</p>
+        @endif
         <a class="btn btn-primary btn-sm" href="{{ route('infoteman.create') }}"> + DataBaru</a>
 
         <table class="table table-hover">
